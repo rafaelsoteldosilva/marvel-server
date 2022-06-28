@@ -9,9 +9,9 @@ router.route("/getAllUsers").get(UserEndpoints.getAllUsers);
 router.route("/getAUser/:id").get(UserEndpoints.getAUser);
 
 // Creating one
-router.route("/AddAUser").get(UserEndpoints.AddAUser);
+router.route("/AddAUser").post(UserEndpoints.AddAUser);
 
 // Deleting one
-router.route("/deleteAUser/:id").get(UserEndpoints.deleteAUser);
+router.route("/deleteAUser/:id").delete(UserEndpoints.deleteAUser);
 
 module.exports = router;

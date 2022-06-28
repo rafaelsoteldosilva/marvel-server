@@ -34,6 +34,7 @@ const getAUser = async (req, res) => {
 
 // Creating one
 const AddAUser = async (req, res) => {
+   console.log("*************** AddAUser:: req.body: ", req.body);
    const user = new User({
       email: req.body.email,
       password: req.body.password,
