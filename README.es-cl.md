@@ -17,47 +17,66 @@ El proyecto usa el servicio en la nube `Atlas Mongo DB`, el cual ayuda en la ide
 -  Entre en website `MongoDB Atlas` (<a href="https://www.mongodb.com/" rel="Atlas Mongo DB">Ir a Atlas Mongo DB</a>)
 -  Subscríbase y cree una base de datos
 -  Para aquellos que no han creado una colección con Atlas Mongo DB, aquí está el cómo:
+
    -  Signup en el website
    -  Asegúrese de escojer la opción gratis
+
    <p align="center">
      <img src="./src/imagesForReadme/01- Create MongoDB Free.jpg" width="500" alt="01- Create MongoDB Free"/>
    </p>
+
    -  Cree un cluster
+
    <p align="center">
      <img src="./src/imagesForReadme/02- Create Cluster.jpg" width="500" alt="02- Create Cluster"/>
    </p>
+
    -  Cree un usuario, supongamos que es (rafael, 1234)
    -  Necesiotamos esta información para más adelante
+
    <p align="center">
      <img src="./src/imagesForReadme/03- Create User.jpg" width="500" alt="03- Create User"/>
    </p>
+
    -  Presione `connect`
+
    <p align="center">
      <img src="./src/imagesForReadme/04- Database Connect.jpg" width="500" alt="04- Database Connect"/>
    </p>
+
    -  Agregue su `IP address`
+
    <p align="center">
      <img src="./src/imagesForReadme/05- Connect To Cluster.jpg" width="500" alt="05- Connect To Cluster"/>
    </p>
    <p align="center">
      <img src="./src/imagesForReadme/06- Add your current IP Address.jpg" width="500" alt="06- Add your current IP Address"/>
    </p>
+
    -  Presione **Choose a connection method**
+
    <p align="center">
      <img src="./src/imagesForReadme/07- Choose a connection method.jpg" width="500" alt="07- Choose a connection method"/>
    </p>
+
    -  Presione **Connect your application**
+
    <p align="center">
      <img src="./src/imagesForReadme/08- Connect your Application.jpg" width="500" alt="08- Connect your Application"/>
    </p>
+
    -  Copie la parte del `connection string` que es como: **mongodb+srv://....mongodb.net/**, (cuando copio el string completo, me salen errores, por eso copio sólo lo que indico)
+
    <p align="center">
      <img src="./src/imagesForReadme/09- Add your connection string and close.jpg" width="500" alt="09- Add your connection string and close"/>
    </p>
+
    -  Este `connection string` es lo que tipearemos en el `.env`
    -  Démosle a la base de datos un nombre, supongamos que es `project`
--  Escriba el/la usuario, password (supongamos que es (`rafael, 1234`)) y el nopmbre de la base de datos en el `connection string`
--  Type the user, password (suppose it's (`rafael, 1234`)) and database name in the connection string: **`mongodb+srv://rafael:1234@cluster0....mongodb.net/project**,
+
+   -  Escriba el/la usuario, password (supongamos que es (`rafael, 1234`)) y el nopmbre de la base de datos en el `connection string`
+   -  Type the user, password (suppose it's (`rafael, 1234`)) and database name in the connection string: **`mongodb+srv://rafael:1234@cluster0....mongodb.net/project**,
+
 -  Cree un archivo `.env` en el directorio raiz del projecto, y setee el `connection string`:
 
 ```jsx
