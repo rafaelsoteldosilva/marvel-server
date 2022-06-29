@@ -32,7 +32,7 @@ El proyecto usa el servicio en la nube `Atlas Mongo DB`, el cual ayuda en la ide
    </p>
 
    -  Cree un usuario, supongamos que es (rafael, 1234)
-   -  Necesiotamos esta información para más adelante
+   -  Necesitamos esta información para más adelante
 
    <p align="center">
      <img src="./src/imagesForReadme/03- Create User.jpg" width="500" alt="03- Create User"/>
