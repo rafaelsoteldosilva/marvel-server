@@ -12,15 +12,58 @@ The project uses the `Atlas Mongo DB` cloud service, which helps the idea of not
 
 -  `GIT clone` the repository in your hard drive
 -  `cd` into the created folder, and run `npm install` in order to install all dependencies
--  Get into `MongoDB Atlas` (<a href="https://www.mongodb.com/" rel="Atlas Mongo DB">Go to Atlas Mongo DB</a>), subscribe and create a database, you can call it whatever you want, suppose it's **`project`**
--  Get the `connection string` for the database, it's of the form **`mongodb+srv://<user>:<password>@cluster0....mongodb.net/project**, note that the database name is at the end of the string
--  Create an `.env` file in the root directory, add set the connection string:
+-  As we are using a server that's in the cloud, I placed the `connection string` in an environment file (`.env`), that is also in the `.gitignore` file, so when loding up to github, it is not included, you need to create your own
+-  Let's go for it
+-  Get into `MongoDB Atlas` (<a href="https://www.mongodb.com/" rel="Atlas Mongo DB">Go to Atlas Mongo DB</a>)
+-  Subscribe and create a database,
+-  For those of you that haven't already created a collection with this Atlas Mongo DB, here's how:
+   -  SignUp on the website
+   -  Make sure you select the Free option
+   <p align="center">
+     <img src="./src/imagesForReadme/01- Create MongoDB Free.jpg" width="500" alt="01- Create MongoDB Free"/>
+   </p>
+   -  Create a cluster
+   <p align="center">
+     <img src="./src/imagesForReadme/02- Create Cluster.jpg" width="500" alt="02- Create Cluster"/>
+   </p>
+   -  Create a user, suppose it's (rafael, 1234)
+   -  We need this for the connection string later on
+   <p align="center">
+     <img src="./src/imagesForReadme/03- Create User.jpg" width="500" alt="03- Create User"/>
+   </p>
+   -  Press `connect`
+   <p align="center">
+     <img src="./src/imagesForReadme/04- Database Connect.jpg" width="500" alt="04- Database Connect"/>
+   </p>
+   -  Add your `IP address`
+   <p align="center">
+     <img src="./src/imagesForReadme/05- Connect To Cluster.jpg" width="500" alt="05- Connect To Cluster"/>
+   </p>
+   <p align="center">
+     <img src="./src/imagesForReadme/06- Add your current IP Address.jpg" width="500" alt="06- Add your current IP Address"/>
+   </p>
+   -  Press **Choose a connection method**
+   <p align="center">
+     <img src="./src/imagesForReadme/07- Choose a connection method.jpg" width="500" alt="07- Choose a connection method"/>
+   </p>
+   -  Choose **Connect your application**
+   <p align="center">
+     <img src="./src/imagesForReadme/08- Connect your Application.jpg" width="500" alt="08- Connect your Application"/>
+   </p>
+   -  Copy the part of the `connection string` that's like: **mongodb+srv://....mongodb.net/**, (when copying the whole string, I got some errors, so I just copied the part that's like that)
+   <p align="center">
+     <img src="./src/imagesForReadme/09- Add your connection string and close.jpg" width="500" alt="09- Add your connection string and close"/>
+   </p>
+   -  This `connection string` is what we'll type into our .env file
+-  Let's give the database a name, say it's **`project`**
+-  Type the user, password (suppose it's (`rafael, 1234`)) and database name in the `connection string`: **`mongodb+srv://rafael:1234@cluster0....mongodb.net/project`**,
+-  Create an `.env` file in the root directory, add set the `connection string`:
 
 ```jsx
-MONGODB_URI=mongodb+srv://<user>:<password>@cluster0....mongodb.net/project
+MONGODB_URI=mongodb+srv://rafael:1234@cluster0....mongodb.net/project
 ```
 
-Don't forget to place your user and password in the connection string
+Make sure that there's no space in the connection string
 
 -  Run **`npm start`**
 -  wait for the messages:

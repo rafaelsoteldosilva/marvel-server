@@ -34,7 +34,6 @@ const getAUser = async (req, res) => {
 
 // Creating one
 const AddAUser = async (req, res) => {
-   console.log("*************** AddAUser:: req.body: ", req.body);
    const user = new User({
       email: req.body.email,
       password: req.body.password,
@@ -43,6 +42,7 @@ const AddAUser = async (req, res) => {
       const newUser = await user.save();
       res.status(201).json(newUser);
    } catch (error) {
+      console.log("ERROR: ", error);
       res.status(400).json({ message: error.message });
    }
 };
